@@ -5,7 +5,7 @@ import logging as log
 
 
 #Llamamos una configuracion basica
-log.basicConfig(level=log.DEBUG,                            # %s = parámetro posicional
+log.basicConfig(level=log.INFO,                            # %s = parámetro posicional
                 format='%(asctime)s:%(levelname)s [%(filename)s:%(lineno)s] %(message)s',
                 datefmt='%I:%M:%S %p',                      # datefmt = date format
                 handlers=[
