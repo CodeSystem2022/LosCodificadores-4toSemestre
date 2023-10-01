@@ -14,7 +14,11 @@ Grupo de la Tecnicatura Universitaria en Programaci√≥n de la Universidad Tecnol√
 
 
 | **Semana** | **Scrum Master** | **Anotaciones** |  |  | 
-| ---- | ---- | --- | --- | --- | 
+| ---- | ---- | --- | --- | --- |
+| **1** | *Agustin Vera* | **SEMANA COMPLETA** | | 
+| | **JAVA** |  |
+| | **JAVASCRIPT** |  |
+| | **PYTHON** |  |
 
 
 
