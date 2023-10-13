@@ -1,19 +1,20 @@
+# Profundizando en los sistemas de numeración
 
+# Sistema decimal
+a = 10
+print(f'a Decimal: {a}')
 
+# Sistema Binario
+a = 0b1010
+print(f'a Binario: {a}')
 
+# Sistema Octal
+a = 0o12
+print(f'a Octal: {a}')
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Sistema Hexadecimal
+a = 0xA
+print(f'a Hexadecimal: {a}')
 
 
 #base decimal
