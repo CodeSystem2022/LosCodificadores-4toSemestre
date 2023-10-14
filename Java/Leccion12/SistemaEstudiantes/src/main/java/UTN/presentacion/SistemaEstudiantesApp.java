@@ -1,27 +1,27 @@
 package UTN.presentacion;
 
+import UTN.conexion.Conexion;
+import UTN.datos.EstudianteDAO;
+import UTN.dominio.Estudiante;
+
+import java.util.Scanner;
+
 public class SistemaEstudiantesApp {
     public static void main(String[] args) {
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        var salir = false;
+        var consola = new Scanner(System.in); // Para leer información de la consola.
+        // Se crea una instancia de la clase servicio, fuera del ciclo.
+        var estudianteDAO = new EstudianteDAO(); // Esta instancia debe hacerse una vez (fuera del ciclo).
+        while(!salir){
+            try{
+                mostrarMenu(); //Mostramos el menú.
+                // Este método devolverá un booleano.
+                salir = ejecutarOpciones(consola, estudianteDAO); // Este arroja una exception.
+            } catch(Exception e){
+                System.out.println("Ocurrió un error al ejecutar la operación: "+e.getMessage());
+            }
+        } // Fin while
+    } // Fin main
 
 
 
@@ -44,7 +44,7 @@ public class SistemaEstudiantesApp {
             case 1 -> { //Listar estudiantes
                 System.out.println("Listado de Estudiantes...");
                 //no muestra la información, solo recupera la info y regresa una lista
-                var estudiantes = estudianteDAO.listarEstudiantes();//recibe el listado
+                var estudiantes = estudianteDAO.listarEstudiante();//recibe el listado
                 //vamos a iterar cada objeto de tipo estudiante
                 estudiantes.forEach(System.out::println);//para imprimir la lista
             }//fin caso 1
