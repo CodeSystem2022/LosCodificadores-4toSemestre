@@ -52,7 +52,7 @@ public class SistemaEstudiantesApp {
                 System.out.println("Introduce el id_estudiante a buscar: ");
                 var idEstudiante = Integer.parseInt(consola.nextLine());
                 var estudiante = new Estudiante(idEstudiante);
-                var encontrado = estudianteDAO.buscarEstudiantePorId(estudiante);
+                var encontrado = estudianteDAO.buscarEstudiantePorID(estudiante);
                 if(encontrado)
                     System.out.println(" Estudiante encontrado: "+estudiante);
                 else
