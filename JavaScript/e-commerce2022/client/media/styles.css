@@ -10,13 +10,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .card-products img {
     margin-top: 40px;
     width: 250px;
     height: 250px;
 }
-
 .card-products button {
     border: none;
     outline: 0;
@@ -33,54 +31,23 @@
     opacity: 0.7;
 }
 
+/* card button */
+.cart-btn  {
+    position: fixed;
+    top: 90vh;
+    right: 40px;
+    background-color: rgb(25,25,25);
+    padding: 10px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    transition: transform 0.2s ease-in-out;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cart-btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
 
 /* modal */
 .modal-overlay{
@@ -89,6 +56,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1;
 }
 .modal-container{
@@ -106,9 +75,11 @@
     max-height: 80vh;
     overflow-y: auto;
 }
+
 .modal-container::-webkit-scrollbar{
     display: none;
 }
+
 .modal-close{
     float: right;
     cursor: pointer;
