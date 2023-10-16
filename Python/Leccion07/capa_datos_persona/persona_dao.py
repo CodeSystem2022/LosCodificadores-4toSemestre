@@ -53,7 +53,6 @@ if __name__ == '__main__':
     personas_actualizadas = PersonaDAO.actualizar(persona1)
     log.debug(f'Personas actualizadas: {personas_actualizadas}')
 
-
     #Insertar registro
     #persona1 = Persona(nombre="Omero", apellido="Ramos", email="omeror@mail.com")
     #personas_insertadas = PersonaDAO.insertar(persona1)

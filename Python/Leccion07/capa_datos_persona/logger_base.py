@@ -3,7 +3,6 @@
 import logging as log 
 # log = logging, también podría hacerse
 
-
 #Llamamos una configuracion basica
 log.basicConfig(level=log.INFO,                            # %s = parámetro posicional
                 format='%(asctime)s:%(levelname)s [%(filename)s:%(lineno)s] %(message)s',
