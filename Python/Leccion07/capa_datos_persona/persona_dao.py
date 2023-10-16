@@ -1,4 +1,4 @@
-from Leccion07.capa_datos_persona.cursor_del_pool import CursorDelPool
+from capa_datos_persona.cursor_del_pool import CursorDelPool
 from capa_datos_persona.Persona import Persona
 from capa_datos_persona.conexion import Conexion
 from logger_base import log
