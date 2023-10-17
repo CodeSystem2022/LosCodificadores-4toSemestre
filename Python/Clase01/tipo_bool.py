@@ -52,3 +52,10 @@ if (1,):
     print('Regresa verdaderos')
 else:
     print('Regresa falso')
+
+# Ciclos
+variable = 17
+while variable:
+    print('Regresa verdadero')
+else:
+    print('Regresa falso')
