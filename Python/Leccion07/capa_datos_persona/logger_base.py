@@ -3,7 +3,7 @@
 import logging as log 
 # log = logging, también podría hacerse
 
-#Llamamos una configuracion basica
+# Llamamos una configuración básica
 log.basicConfig(level=log.INFO,                            # %s = parámetro posicional
                 format='%(asctime)s:%(levelname)s [%(filename)s:%(lineno)s] %(message)s',
                 datefmt='%I:%M:%S %p',                      # datefmt = date format

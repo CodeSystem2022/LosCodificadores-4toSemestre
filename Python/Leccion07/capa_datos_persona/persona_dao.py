@@ -3,6 +3,7 @@ from capa_datos_persona.Persona import Persona
 from capa_datos_persona.conexion import Conexion
 from logger_base import log
 
+
 class PersonaDAO:
     """
     DAO significa: Data Access Object
@@ -29,6 +30,7 @@ class PersonaDAO:
                 persona = Persona(registro[0], registro[1], registro[2], registro[3])
                 personas.append(persona)
             return personas
+
 
     @classmethod
     def insertar(cls, persona):
