@@ -47,7 +47,21 @@ const displayCart = ()=> {
             <div class="delete-product">❌</div>
         </div>
         `;
-        modalContainer.append(modalBody); 
+        modalContainer.append(modalBody);
+        
+        const decrese = modalBody.querySelector("quantity-btn-decrese");
+        decrese.addEvenListener("click", () => {
+            if(product.quanty !== 1){
+                product.quanty--;
+                displayCart();
+            }
+        });
+
+        const increse = modalBody.querySelector("quantity-btn-increse");
+        increse.addEvenListener("click", () => {
+            product.quanty++;
+            displayCart();
+    });
     });
 
      //modal footer
