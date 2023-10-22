@@ -15,7 +15,7 @@ public class SistemaEstudiantesApp {
         while(!salir){
             try{
                 mostrarMenu(); //Mostramos el menú.
-                // Este método devolverá un booleano.
+                // Este sera el método ejecutarOpciones que devolverá un booleano.
                 salir = ejecutarOpciones(consola, estudianteDAO); // Este arroja una exception.
             } catch(Exception e){
                 System.out.println("Ocurrió un error al ejecutar la operación: "+e.getMessage());
@@ -23,17 +23,18 @@ public class SistemaEstudiantesApp {
         } // Fin while
     } // Fin main
 
-
-
-
-
-
-
-
-
-
-
-
+    private statitc void mostrarMenu(){
+        System.out.print("""
+                ****** Sistema de Estudiantes ******
+                1. Listar Estudiantes
+                2. Buscar Estudiantes
+                3. Agregar Estudiante
+                4. Modificar Estudiante
+                5. Elimar Estudiante
+                6. Salir
+                Elige una opcion: 
+            """);
+    }
 
     //Método para ejecutar las opciones, va a regresar un valor booleano, ya que es el que
     //puede modificar el valor de la variable salir, si es verdadero termina el ciclo while

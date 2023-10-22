@@ -1,7 +1,6 @@
 # Profundizando en el tipo float
 a = 3.0
 
-
 # Constructor de tipo float -> puede escribir int y str
 a = float(10)  # Le pasamos un tipo entero (int)
 a = float('10')
