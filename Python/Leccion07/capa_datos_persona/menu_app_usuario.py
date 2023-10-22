@@ -16,7 +16,6 @@ if opcion == 1:
         for usuario in usuarios:
             log.info(usuario)
 
-
 elif opcion ==3:
         id_usuario_var = int(input('Digite el id del usuario a modificar: '))
         username_var = input('Digite el nombre del usuario a modificar')
@@ -24,10 +23,12 @@ elif opcion ==3:
         usuario = Usuario(id_usuario = id_usuario_var, username=username_var, password=password_var)
         usuario_actualizado = UsuarioDAO.actualizar(usuario)
         log.info(f'Usuario actualizado: {usuario_actualizado}')
+
 elif opcion == 4:
         id_usuario_var = int(input('Digite el id del usuario a eliminar: '))
         usuario = Usuario(id_usuario=id_usuario_var)
         usuario_eliminado = UsuarioDAO.eliminar(usuario)
         log.info(f'Usuario eliminado: {usuario_eliminado}')
+
 else:
     log.info('Salimos de la aplicación, hasta pronto!!')

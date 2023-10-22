@@ -1,7 +1,8 @@
-from Leccion07.capa_datos_persona.cursor_del_pool import CursorDelPool
+from capa_datos_persona.cursor_del_pool import CursorDelPool
 from capa_datos_persona.Persona import Persona
 from capa_datos_persona.conexion import Conexion
 from logger_base import log
+
 
 class PersonaDAO:
     """
@@ -30,6 +31,7 @@ class PersonaDAO:
                 personas.append(persona)
             return personas
 
+
     @classmethod
     def insertar(cls, persona):
         with CursorDelPool() as cursor:
@@ -52,7 +54,6 @@ if __name__ == '__main__':
     persona1 = Persona(1, 'Juan José', 'Pena', 'jjpena@mail.com')
     personas_actualizadas = PersonaDAO.actualizar(persona1)
     log.debug(f'Personas actualizadas: {personas_actualizadas}')
-
 
     #Insertar registro
     #persona1 = Persona(nombre="Omero", apellido="Ramos", email="omeror@mail.com")
