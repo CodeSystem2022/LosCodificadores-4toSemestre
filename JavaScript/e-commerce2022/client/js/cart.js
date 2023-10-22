@@ -1,7 +1,8 @@
- const modalContainer = document.getElementById("modal-container");
+const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
 
 const cartBtn = document.getElementById('cart-btn');
+const cartCounter = document.getElementById('cart-counter')
 
 const displayCart = ()=> {
     modalContainer.innerHTML = "";
@@ -94,6 +95,14 @@ cartBtn.addEventListener("click", displayCart);
   
 
    
-
+const displayCartCounter = ()=> {
+    const cartLength = cart.reduce((acc, el)=> acc + el.price * el.quanty, 0)
+    if(cartLength >0){
+        cartCounter.style.display = "block"
+        cartCounter.innerText = cartLength
+    }else{
+        cartCounter.style.display = "none"
+    }
+}
 
 
