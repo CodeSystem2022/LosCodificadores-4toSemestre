@@ -6,8 +6,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication // notacion para ejecutar
 public class EstudiantesApplication { //clase
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	String nl = System.lineSeparator();
+
 	public static void main(String[] args) {
+		logger.info("Iniciando la aplicacion...");
+		//Levantar la fabrica de Spring
 		SpringApplication.run(EstudiantesApplication.class, args);
-	}//todo esto es para poder ejecutar la aplicacion para poder ejecutar la aplicacion
+		logger.info("Aplicacion Finalizada!");
+	}
+
+	@Override
+	public void run(String...args) throws Exception {
+		logger.info("Ejecutando el metodo run de Spring...");
+	}
 
 }
