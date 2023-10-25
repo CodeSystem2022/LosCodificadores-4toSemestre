@@ -17,7 +17,7 @@ public class EstudiantesApplication { //clase
 	
 	
 	
-	String nl = System.lineSeparator();
+	String nl = System.lineSeparator(); 
 
 	public static void main(String[] args) {
 		logger.info("Iniciando la aplicacion...");
