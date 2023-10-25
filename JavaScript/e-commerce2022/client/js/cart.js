@@ -63,7 +63,15 @@ const displayCart = ()=> {
             increse.addEvenListener("click", () => {
                 product.quanty++;
                 displayCart();
-        });
+            });
+            
+             // delete
+            const deleteProduct = modalBody.querySelector(".delete-product");
+            
+            deleteProduct.addEventListener("click", ()=> {
+                deleteCartProduct(product.id);
+            });
+
         });
     }else{
         const modalText = document.createElement("h2")
@@ -72,19 +80,25 @@ const displayCart = ()=> {
         modalContainer.append(modalText)
     }
 
-     //modal footer
+
+    // modal footer
 
      const modalFooter = document.createElement("div");
      modalFooter.className = "modal-footer";
      modalFooter.innerHTML = `
-     <div class = "total-price">Total: </div>   
+     <div class = "total-price">Total: ${total}</div>   
       `;
       modalContainer.append(modalFooter);
 };
 
 cartBtn.addEventListener("click", displayCart);
 
-
+const deleteCartProduct =(id)=> {
+    const foundId = cart.findIndex((element)=> element.id === id)
+    console.log(foundId);
+    cart.splice(foundId, 1);
+    displayCart();
+};
 
    
    
