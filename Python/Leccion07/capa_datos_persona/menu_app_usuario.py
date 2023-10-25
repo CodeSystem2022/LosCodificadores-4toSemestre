@@ -15,7 +15,11 @@ if opcion == 1:
         usuarios = UsuarioDAO.seleccionar()
         for usuario in usuarios:
             log.info(usuario)
-
+elif opcion == 2:
+      username_var = input('Digite el nombre del usuario: ')
+      password_var = input('Digite la contraseña: ')
+      usuario = usuario(username=username_var, password=password_var)
+      log.indo(f'Ususario insertado: {usuario_insertado}')
 
 elif opcion ==3:
         id_usuario_var = int(input('Digite el id del usuario a modificar: '))
