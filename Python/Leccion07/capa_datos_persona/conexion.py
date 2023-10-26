@@ -3,7 +3,6 @@ from psycopg2 import pool
 from logger_base import log
 import sys
 
-
 class Conexion:
     _DATABASE = 'test_bd'
     _USERNAME = 'postgres'
