@@ -11,12 +11,21 @@ import java.util.Scanner;
 
 @SpringBootApplication // notacion para ejecutar
 public class EstudiantesApplication implements CommandLineRunner { //clase
+  String nl = System.lineSeparator();
 	@Autowired
 	private EstudianteServicio estudianteServicio;
 	private static final Logger logger = LoggerFactory.getLogger(EstudiantesApplication.class);
 	public static void main(String[] args) {
+		logger.info("Iniciando la aplicacion...");
+		//Levantar la fabrica de Spring
 		SpringApplication.run(EstudiantesApplication.class, args);
-	}//todo esto es para poder ejecutar la aplicacion para poder ejecutar la aplicacion
+		logger.info("Aplicacion Finalizada!");
+	}
+
+	@Override
+	public void run(String...args) throws Exception {
+		logger.info("Ejecutando el metodo run de Spring...");
+	}
 
 	@Override
 	public void run(String... args) throws Exception{
@@ -95,4 +104,39 @@ public class EstudiantesApplication implements CommandLineRunner { //clase
 		}//Fin switch
 		return salir;
 	}//Fin metodo ejecutarOpciones
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private boolean ejecutarOpciones(Scanner consola) {
+		var opcion = Integer.parseInt(consola.nextLine());
+		var salir = false;
+		switch(opcion){
+			case 1 -> {//Listar estudiantes
+			logger.info(nl+"Listado de estudiantes: "+nl);
+			List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiante();
+			estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
+		}
+	}//Fin switch
+	return salir;
 }
