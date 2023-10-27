@@ -98,22 +98,11 @@ const deleteCartProduct =(id)=> {
     console.log(foundId);
     cart.splice(foundId, 1);
     displayCart();
-};
-
-   
-   
-
-
-
-
-
-
-
-
-    
+};    
     
 
-  
+
+
 
    
 const displayCartCounter = ()=> {
