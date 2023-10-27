@@ -57,12 +57,14 @@ const displayCart = ()=> {
                     product.quanty--;
                     displayCart();
                 }
+                displayCartCounter();
             });
     
             const increse = modalBody.querySelector("quantity-btn-increse");
             increse.addEvenListener("click", () => {
                 product.quanty++;
                 displayCart();
+                displayCartCounter();
             });
             
              // delete
@@ -73,22 +75,81 @@ const displayCart = ()=> {
             });
 
         });
-    }else{
+
+        // modal footer
+
+
+        const modalFooter = document.createElement("div");
+        modalFooter.className = "modal-footer";
+        modalFooter.innerHTML = `
+        <div class = "total-price">Total: ${total}</div>
+        <button class="btn-pimary" id="checkout-btn"> go to checkout</button>
+        <div id="button-checkout"></div>
+        `;
+      modalContainer.append(modalFooter);
+      // mp
+      const mercadopago = new MercadoPago("public_key", {
+        locale: "es-AR",  // Los más comunes son; 'pt-BR', 'es-AR' y 'en-US'
+      });
+
+      const checkoutButton = modalFooter.querySelector("checkout-btn");
+
+        checkoutButton.addEventListener("click", function() {
+        
+            checkoutButton.remove();
+
+            const orderData = {
+                quantity: 1,
+                description: "compra de ecommerce",
+                price: total,
+            };
+
+            fetch("http:localhost:8080/create_preference", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(orderData),
+            })
+                .then(function (response) {
+                return response.json;
+                })
+                .then(function(preference) {
+                createCheckoutButton(preference.id);
+                })
+                .catch(function() {
+                alert("Unexpected error");
+                });
+        });
+
+        function createCheckoutButton(preferenceId) {
+            // Inicializa el checkout
+            const bricksBuilder = mercadopago.bricks();
+
+            const renderComponent = async (brickBuilder) => {
+                // If (window.checkoutButton) checkoutButton.unmount()
+                 await brickBuilder.create(
+                    "wallet",
+                    "button-checkout",  // class/id donde el botón de pago será desplegado
+                    {
+                        initialization: {
+                            preferenceId: preferenceId,
+                        },
+                        callbacks: {
+                            onError: (error) => console.error(error),
+                            onReady: () => {},
+                        },
+                    }
+                 );
+            };
+            window.checkoutButton = renderComponent(brickBuilder);
+        }
+    } else {
         const modalText = document.createElement("h2")
         modalText.className = "modal-body"
         modalText.innerText = "Your cart is empty"
         modalContainer.append(modalText)
-    }
-
-
-    // modal footer
-
-     const modalFooter = document.createElement("div");
-     modalFooter.className = "modal-footer";
-     modalFooter.innerHTML = `
-     <div class = "total-price">Total: ${total}</div>   
-      `;
-      modalContainer.append(modalFooter);
+    }   
 };
 
 cartBtn.addEventListener("click", displayCart);
@@ -98,43 +159,17 @@ const deleteCartProduct =(id)=> {
     console.log(foundId);
     cart.splice(foundId, 1);
     displayCart();
-<<<<<<< HEAD
 };    
-=======
-};
-
-   
-   
-
-    <button class="btn-primary" id="checkout-btn">go to checkout</button>
-    <div id="button-checkout"></div>
-
-modalContainer.append(modalFooter);
-// mp;
-const mercadopago = new MercadoPago("public_key),{
-    locale: "es-AR", //The most common are: 'pt-BR', 'es-AR' and 'en-US'
-});
-
-const checkoutButton = modalFooter.querySelector("#checkout-btn");
-
-
-
-    
->>>>>>> main
     
 
-
-
-
-   
 const displayCartCounter = ()=> {
-    const cartLength = cart.reduce((acc, el)=> acc + el.price * el.quanty, 0)
+    const cartLength = cart.reduce((acc, el)=> acc + el.price * el.quanty, 0);
     if(cartLength >0){
-        cartCounter.style.display = "block"
+        cartCounter.style.display = "block";
         cartCounter.innerText = cartLength
     }else{
-        cartCounter.style.display = "none"
+        cartCounter.style.display = "none";
     }
-}
+};
 
 
