@@ -1,5 +1,6 @@
-package utn.estudiantes.servicio;
+package estudiantes.servicio;
 
+import
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utn.estudiantes.modelo.Estudiantes2022;
