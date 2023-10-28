@@ -11,6 +11,8 @@ public class libroFrom extends JFrame {
 
 
 
+    private JTable tablaLibros;
+    private DefaultTableModel tablaModelosLibros;
 
 
 
@@ -31,8 +33,14 @@ public class libroFrom extends JFrame {
 
 
 
-
-
+    
+    private void createUIComponents(){
+        this.tablaModeloLibros = new DefaultTableModel(0, 5);
+        String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+        this.tablaModeloLibros.serColumnIdentifiers(cabecera);
+        // Instanciar el objeto de JTable
+        this.tablaLibros = Jtable(tablaModeloLibros);
+    }
 
 
 
