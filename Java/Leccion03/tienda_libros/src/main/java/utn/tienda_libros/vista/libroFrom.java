@@ -1,6 +1,7 @@
 package utn.tienda_libros.vista;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class libroFrom extends JFrame {
 
@@ -15,7 +16,7 @@ public class libroFrom extends JFrame {
     private DefaultTableModel tablaModelosLibros;
 
 
-
+    private JTextField idTexto;
 
 
 
@@ -34,7 +35,70 @@ public class libroFrom extends JFrame {
 
 
     
+   
+                cargarLibroSeleccionado();
+   
+   
+   
+   
+   
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private void cargarLibroSeleccionado(){
+        //Los indices de las columnas inician en 0
+        var renglon = tablaLibros.getSelectedRow();
+        if(renglon != -1){
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();            
+        } 
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private void createUIComponents(){
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);    
         this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
         this.tablaModeloLibros.serColumnIdentifiers(cabecera);
