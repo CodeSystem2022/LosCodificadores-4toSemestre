@@ -7,4 +7,3 @@ console.log('Mi web es: '+web);
 
 //$env:NOMBRE="Ariel"; node enotorno.js
 //$env:WEB="vamosair.com"; node enotorno
-
