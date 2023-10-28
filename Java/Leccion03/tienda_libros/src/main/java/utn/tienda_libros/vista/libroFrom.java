@@ -81,7 +81,7 @@ public class libroFrom extends JFrame {
         var renglon = tablaLibros.getSelectedRow();
         if(renglon != -1){
             String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();            
-        } 
+        }  
     }
     
     
