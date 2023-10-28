@@ -5,4 +5,4 @@ import utn.tienda_libros.modelo.Libro;
 
 public interface LibroRepositorio extends JpaRepository<Libro, Integer> {
     
-}
+} 
