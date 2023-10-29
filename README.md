@@ -45,7 +45,7 @@ Grupo de la Tecnicatura Universitaria en Programaci√≥n de la Universidad Tecnol√
 |**PYTHON** | *Giuliana Gaffoglio* |  ** **| | | 
 |**NODE** | *Giuliana Gaffoglio* |  ** **| | | 
 | ---- | ---- | --- | --- | --- |
-| **11 - 12** |  | ** ** | | 
+| ** - ** |  | ** ** | | 
 |**JAVA** |  | ** ** | | | 
 | **JAVASCRIPT**|  | ** ** | | | 
 |**PYTHON** |  |  ** **| | | 
