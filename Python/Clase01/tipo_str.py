@@ -7,4 +7,4 @@ mensaje += ', Terminamos'
 #print(mensaje)
 
 #Usamos la clase help para ayuda o documentancion (built-in)
-help(str)
+help(math.isnan)
