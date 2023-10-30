@@ -7,6 +7,7 @@ public class libroFrom extends JFrame {
 
 
 
+@Component
 
 
 
@@ -23,6 +24,10 @@ public class libroFrom extends JFrame {
 
 
 
+        @Autowired
+
+
+        agregarButton.addActionListener(e -> agregarLibro());
 
 
 
@@ -39,32 +44,11 @@ public class libroFrom extends JFrame {
 
 
 
-
-
-
-
-    private void listarLibros(){
-        //Limpiar la tabla
-        tablaModeloLibros.setRowCount(0);
-        //Obtener los libros desde la base de datos
-        var libros = libroServicio.listarLibros();
-        //Iteramos cada libro
-        libros.forEach((libro) ->{
-            //Creamos cada registro para agregarlos a la tabla
-            Object [] renglonLibro = {
-                    libro.getIdLibro(),
-                    libro.getNombreLibro(),
-                    libro.getAutor(),
-                    libro.getPrecio(),
-                    libro.getExistencias()
-            };
-        });
-    }
 
     private void agregarLibro(){
         //Leer los valores del formulario
         if(libroTexto.getText().equals("")){
-            mostrarMensaje("Ingrese el nombre del libro");
+            mostrarMensaje("Ingresa el nombre del libro");
             libroTexto.requestFocusInWindow();
             return;
         }
@@ -80,7 +64,29 @@ public class libroFrom extends JFrame {
         libro.setExistencias(existencias);
     }
 
+
+
     private void mostrarMensaje(String mensaje){
         JOptionPane.showMessageDialog(this, mensaje);
     }
+
+    private void listarLibros() {
+        //Limpiar la tabla
+        tablaModeloLibros.setRowCount(0);
+        //Obtener los libros desde la base de datos
+        var libros = libroServicio.listarLibros();
+        //Iteramos cada libro
+        libros.forEach((libro) -> {
+            //Creamos cada registro para agregarlos a la tabla
+            Object[] renglonLibro = {
+                    libro.getIdLibro(),
+                    libro.getNombreLibro(),
+                    libro.getAutor(),
+                    libro.getPrecio(),
+                    libro.getExistencias()
+            };
+        });
+    }
 }
+
+
