@@ -5,14 +5,19 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
+import utn.tienda_libros.vista.libroFrom;
+
+
 import java.awt.EventQueue;
 
 @SpringBootApplication
 public class TiendaLibrosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaLibrosApplication.class, args);
-	}
+
+		//SpringApplication.run(TiendaLibrosApplication.class, args);
+
+
 
 
 
@@ -21,8 +26,10 @@ public class TiendaLibrosApplication {
 				.run(args);
 
 		//Ejecutamos el código para cargar el formulario
-		EventQueue.invokeLater(()-> {
+		EventQueue.invokeLater(() -> { //Método Lambda
 			//Obtenemos el objeto from a través del spring
-		LibroFrom libroFrom = contextoSpring.getBean(LibroFrom.class);
-	});
+			LibroFrom libroFrom = contextoSpring.getBean(LibroFrom.class);
+			libroFrom.setVisible(true);
+		});
+	}
 }
