@@ -6,11 +6,7 @@ import javax.swing.table.DefaultTableModel;
 public class libroFrom extends JFrame {
 
 
-
-
-@Component
-
-
+    @Component
 
 
     private JTable tablaLibros;
@@ -33,18 +29,17 @@ public class libroFrom extends JFrame {
         @Autowired
 
 
-        agregarButton.addActionListener(e -> agregarLibro());
+                agregarButton.addActionListener(e ->
+
+    agregarLibro());
+
+
+    cargarLibroSeleccionado();
 
 
 
+     modificarButton.addActionListener(e -> modificarLibro());
 
-
-    
-   
-                cargarLibroSeleccionado();
-   
-   
-   
    
    
    
@@ -100,13 +95,17 @@ public class libroFrom extends JFrame {
             existenciasTexto.setText(existencias);
         }  
     }
-    
+
     private void modificarLibro(){
         if(this.idTexto.equals((""))){
-
-        }else{
+            mostrarMensaje("Debes selecionar un registro en la tabla");
+        }
+        else{
+            //Verificamos que el nombre del libro no sea nulo
             if(libroTexto.getText().equals("")){
-
+                mostrarMensaje("Digite el nombre del libro....");
+                libroTexto.requestFocusInWindow();
+                return;
             }
             //Llenamos el objeto libro a actualizar
             int idLibro = Integer.parseInt(idTexto.getText());
