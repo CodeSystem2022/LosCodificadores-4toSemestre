@@ -10,7 +10,7 @@ function hola(nombre){
 }
 
 function hablar(nombre){
-    
+   
         setTimeout(function() {
         console.log('bla bla bla bla');
         resolve(nombre);
@@ -19,7 +19,7 @@ function hablar(nombre){
 }
 
 function adios(nombre){
-    
+    return new Promise((resolve, reject) => {
        setTimeout( function(){
         console.log('Adios '+nombre);
        // resolve();
