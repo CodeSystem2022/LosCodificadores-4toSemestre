@@ -28,3 +28,18 @@ function adios(nombre){
     });
     
 }
+
+// LLamamos a la funcion
+console.log('Iniciando el proceso...');
+hola('Ariel')
+    .then(hablar)
+    .then(hablar)
+    .then(hablar)
+    .then(adios)
+    .then((nombre)=> {
+        console.log('Terminando el proceso...');
+    })
+    .catch(error => {
+        console.log('Ha habido un error: ');
+        console.log(error);
+    })
