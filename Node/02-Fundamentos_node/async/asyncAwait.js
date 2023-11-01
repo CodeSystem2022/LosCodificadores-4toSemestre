@@ -43,4 +43,4 @@ async function main(){
 
 console.log('Empezamos el proceso...');
 main();
-console.log('Esta va a sr la segunda instruccion');
+console.log('Esta va a sr la segunda instruccion'); 
