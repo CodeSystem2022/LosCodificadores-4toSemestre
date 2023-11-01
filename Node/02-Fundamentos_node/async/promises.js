@@ -10,7 +10,7 @@ function hola(nombre){
 }
 
 function hablar(nombre){
-   
+    return new Promise((resolve, reject) => { // usamos la sintaxis ES6
         setTimeout(function() {
         console.log('bla bla bla bla');
         resolve(nombre);
