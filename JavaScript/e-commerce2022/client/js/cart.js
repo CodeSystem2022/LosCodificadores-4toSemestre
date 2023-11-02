@@ -77,7 +77,7 @@ const displayCart = ()=> {
         });
 
         // modal footer
-
+        const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
 
         const modalFooter = document.createElement("div");
         modalFooter.className = "modal-footer";
