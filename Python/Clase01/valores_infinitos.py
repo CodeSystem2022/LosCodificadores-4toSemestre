@@ -1,5 +1,5 @@
 
-#manejamos valores infinitos
+#Manejamos valores infinitos positivo y negativo
 
 infinito_positivo = float('inf') #esta cadena representa el valor de infinito positivo
 print(f'infinito positivo:{infinito_positivo}')
