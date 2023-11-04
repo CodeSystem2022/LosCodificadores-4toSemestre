@@ -1,11 +1,35 @@
 package utn.tienda_libros.vista;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import utn.tienda_libros.servicio.LibroServicio;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
+@Component
 public class libroFrom extends JFrame {
+    LibroServicio libroServicio;
+    private JPanel panel;
+
+    @Autowired
+    public libroFrom(LibroServicio libroServicio){
+
+    }
+
+    public void iniciarForma(){
+        setContentPane(panel);
 
 
+
+        // Para obtener las dimensiones de la ventana
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension tamanioPantalla = toolkit.getScreenSize();
+        int x = (tamanioPantalla.width - getWidth()/2);
+        int y = (tamanioPantalla.height - getHeight()/2);
+        setLocation(x,y);
+    }
     @Component
 
 
@@ -14,13 +38,6 @@ public class libroFrom extends JFrame {
 
 
     private JTextField idTexto;
-
-
-
-
-
-
-
 
 
 
@@ -43,36 +60,7 @@ public class libroFrom extends JFrame {
    
    
    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
@@ -120,16 +108,8 @@ public class libroFrom extends JFrame {
             listarLibros();
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
     
     private void createUIComponents(){
         idTexto = new JTextField("");
@@ -140,10 +120,6 @@ public class libroFrom extends JFrame {
         // Instanciar el objeto de JTable
         this.tablaLibros = Jtable(tablaModeloLibros);
     }
-
-
-
-
 
 
 
@@ -167,10 +143,10 @@ public class libroFrom extends JFrame {
     }
 
 
-
     private void mostrarMensaje(String mensaje){
         JOptionPane.showMessageDialog(this, mensaje);
     }
+
 
     private void listarLibros() {
         //Limpiar la tabla
