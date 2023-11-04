@@ -10,6 +10,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
 
 @SpringBootApplication // notacion para ejecutar
+
+//se ejecuta desde la clase
+//Ejecuta el método run de spring
+// Se comienzan las purebas listando: 1
+// Buscamos estudiante: 2
+// Digitamos el id: 2
+// Estudiante encontrado: 2
+//Si el id no esta: Estudiante no encontrado
+//Agregar estudiante:3
+//Ingresamos id agregado: 7
+//Hicimos las modificaciones necesarias
+//Eliminar estudiante por id: 7
+//Cualquier otra opcion es no reconocida.
+// Opcion 6: Aplicación finalizada
+
 public class EstudiantesApplication implements CommandLineRunner { //clase
   String nl = System.lineSeparator();
 	@Autowired
@@ -116,7 +131,7 @@ public class EstudiantesApplication implements CommandLineRunner { //clase
 					logger.info("estudiante eliminado: " + estudiante+nl);
 				}
 				else{
-					logger.info("Estudiante no encontrado por id: " + estudiante + nl);
+					logger.info("Estudiante no encontrado por id: " + idestudiante + nl);
 				}
 			}
 			case 6 -> { //Salir
