@@ -12,10 +12,23 @@ import java.awt.*;
 public class libroFrom extends JFrame {
     LibroServicio libroServicio;
     private JPanel panel;
+    private JTable tablaLibros;
+    private JTextField libroTexto;
+    private JTextField autorTexto;
+    private JTextField precioTexto;
+    private JTextField existenciasTexto;
+    private JButton agregarButton;
+    private JButton modificarButton;
+    private JButton eliminarButton;
+    private DefaultTableModel tablaModeloLibros;
 
     @Autowired
     public libroFrom(LibroServicio libroServicio){
+        this.libroServicio = libroServicio;
+        iniciarForma();
+        agregarButton.addActionListener(e -> {
 
+        });
     }
 
     public void iniciarForma(){
@@ -30,11 +43,39 @@ public class libroFrom extends JFrame {
         int y = (tamanioPantalla.height - getHeight()/2);
         setLocation(x,y);
     }
-    @Component
+
+    private void createUIComponents(){
+        idTexto = new JTextField("");
+        idTexto.setVisible(false);
+        this.tablaModeloLibros = new DefaultTableModel(0, 5);
+        String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+        this.tablaLibros = new JTable(tablaModeloLibros);
+        listarLibros();
+    }
+
+    private void listarLibros() {
+        //Limpiar la tabla
+        tablaModeloLibros.setRowCount(0);
+        //Obtener los libros desde la base de datos
+        var libros = libroServicio.listarLibros();
+        //Iteramos cada libro
+        libros.forEach((libro) -> { //Función lambda
+            //Creamos cada registro para agregarlos a la tabla
+            Object[] renglonLibro = {
+                    libro.getIdLibro(),
+                    libro.getNombreLibro(),
+                    libro.getAutor(),
+                    libro.getPrecio(),
+                    libro.getExistencias()
+            };
+            this.tablaModeloLibros.addRow(renglonLibro);
+        });
+    }
 
 
-    private JTable tablaLibros;
-    private DefaultTableModel tablaModelosLibros;
+
+
 
 
     private JTextField idTexto;
@@ -46,16 +87,16 @@ public class libroFrom extends JFrame {
         @Autowired
 
 
-                agregarButton.addActionListener(e ->
+//                agregarButton.addActionListener(e ->
 
-    agregarLibro());
-
-
-    cargarLibroSeleccionado();
+//    agregarLibro();
 
 
+//    cargarLibroSeleccionado();
 
-     modificarButton.addActionListener(e -> modificarLibro());
+
+
+//     modificarButton.addActionListener(e -> modificarLibro());
 
    
    
@@ -111,15 +152,7 @@ public class libroFrom extends JFrame {
 
 
     
-    private void createUIComponents(){
-        idTexto = new JTextField("");
-        idTexto.setVisible(false);    
-        this.tablaModeloLibros = new DefaultTableModel(0, 5);
-        String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
-        this.tablaModeloLibros.serColumnIdentifiers(cabecera);
-        // Instanciar el objeto de JTable
-        this.tablaLibros = Jtable(tablaModeloLibros);
-    }
+
 
 
 
@@ -148,23 +181,7 @@ public class libroFrom extends JFrame {
     }
 
 
-    private void listarLibros() {
-        //Limpiar la tabla
-        tablaModeloLibros.setRowCount(0);
-        //Obtener los libros desde la base de datos
-        var libros = libroServicio.listarLibros();
-        //Iteramos cada libro
-        libros.forEach((libro) -> {
-            //Creamos cada registro para agregarlos a la tabla
-            Object[] renglonLibro = {
-                    libro.getIdLibro(),
-                    libro.getNombreLibro(),
-                    libro.getAutor(),
-                    libro.getPrecio(),
-                    libro.getExistencias()
-            };
-        });
-    }
+
 }
 
 

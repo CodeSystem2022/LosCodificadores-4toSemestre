@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d11a2bd5-01f7-4187-8685-c73bef78a150" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/TiendaLibrosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/TiendaLibrosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/servicio/ILibroServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/servicio/ILibroServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/servicio/LibroServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/servicio/LibroServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.form" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.java" afterDir="false" />
     </list>
@@ -44,7 +45,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/guillermo/LosCodificadores-4toSemestre/Java/Leccion03",
+    "last_opened_file_path": "C:/Users/guillermo/LosCodificadores-4toSemestre/Java/Leccion03/tienda_libros/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +59,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\guillermo\LosCodificadores-4toSemestre\Java\Leccion03\tienda_libros\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="TiendaLibrosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tienda_libros" />
@@ -82,7 +88,8 @@
       <workItem from="1699105450381" duration="1891000" />
       <workItem from="1699108616196" duration="164000" />
       <workItem from="1699108791984" duration="158000" />
-      <workItem from="1699108961137" duration="11094000" />
+      <workItem from="1699108961137" duration="11906000" />
+      <workItem from="1699125074718" duration="14821000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,8 @@ package utn.tienda_libros.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import utn.tienda_libros.repositorio.LibroRepositorio;
+import utn.tienda_libros.modelo.Libro;
 
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class LibroServicio implements ILibroServicio{
 
     @Override
     public Libro buscarLibroPorId(Integer idLibro) {
-        Libro libro = libroRepositorio.findById(idlibro).orElse(null);
+        Libro libro = libroRepositorio.findById(idLibro).orElse(null);
         return libro;
     }
 

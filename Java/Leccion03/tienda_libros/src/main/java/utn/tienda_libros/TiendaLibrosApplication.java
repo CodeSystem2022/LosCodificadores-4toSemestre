@@ -16,7 +16,8 @@ import java.awt.EventQueue;
 @SpringBootApplication
 public class TiendaLibrosApplication {
 
-	public static void main(String[] args) { SpringApplication.run(TiendaLibrosApplication.class, args);
+	public static void main(String[] args) {
+		//SpringApplication.run(TiendaLibrosApplication.class, args);
 		ConfigurableApplicationContext contextoSpring =
 				new SpringApplicationBuilder(TiendaLibrosApplication.class)
 					.headless(false)
@@ -26,7 +27,7 @@ public class TiendaLibrosApplication {
 		//Ejecutamos el código para cargar el formulario
 		EventQueue.invokeLater(() -> { //Método Lambda
 			//Obtenemos el objeto from a través del spring
-			LibroFrom libroFrom = contextoSpring.getBean(LibroFrom.class);
+			libroFrom libroFrom = contextoSpring.getBean(libroFrom.class);
 			libroFrom.setVisible(true);
 		});
 	}
