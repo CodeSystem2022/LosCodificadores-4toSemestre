@@ -12,24 +12,38 @@ function hablar(callbackHablar){
     }, 1000)
 }
 
-function adios(nombre, otroCallback) {
+function adios(nombre, otroCallback){
     setTimeout(function() {
         console.log('Adios '+nombre)
         otroCallback();
     }, 1500);
 }
+
+// Función recursiva
+function conversacion(nombre, veces, callback){
+    if (veces > 0) {
+        hablar(function() {
+            conversacion(nombre, --veces, callback);
+        });
+    } else {
+        callback(nombre, callback);
+    }
+  
+}
+
 // -- Proceso principal
 console.log('Iniciando el proceso...');
-hola('Carlos', function(nombre) {
-    hablar(function() {
-        hablar(function() {
-            hablar(function() {
-                hablar(function() {
-                    adios(nombre, function(){
-                        console.log('Terminado el proceso...');
-                    });
-                });
-            });
-        });
-    });  
-});
+hola('Ariel', adios);
+//hola('Carlos', function(nombre) {
+//    hablar(function() {
+//        hablar(function() {
+//            hablar(function() {
+//                hablar(function() {
+//                    adios(nombre, function(){
+//                        console.log('Terminado el proceso...');
+//                    });
+//                });
+//            });
+//        });
+//    });  
+//});
