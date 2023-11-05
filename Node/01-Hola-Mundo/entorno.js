@@ -7,3 +7,6 @@ console.log('Mi web es: '+web);
 
 //$env:NOMBRE="Ariel"; node enotorno.js
 //$env:WEB="vamosair.com"; node enotorno
+
+// console.log('Última parte');
+console.log('Última ejecución');
