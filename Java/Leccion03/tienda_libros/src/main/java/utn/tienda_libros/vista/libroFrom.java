@@ -4,6 +4,20 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class libroFrom extends JFrame {
+    LibroServicio LibroServicio;
+    private JPanel panel;
+
+    @Autowired
+    public LibroFrom(LibroServicio libroServicio){
+        this.libroServicio = libroServicio;
+        iniciarForma();
+    }
+    private void iniciarForma(){
+        setContemtPane(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true)
+        setSize(900, 700);
+    }
 
 
     @Component
@@ -14,6 +28,8 @@ public class libroFrom extends JFrame {
 
 
     private JTextField idTexto;
+
+
 
 
 
