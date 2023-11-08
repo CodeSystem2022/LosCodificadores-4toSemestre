@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d11a2bd5-01f7-4187-8685-c73bef78a150" name="Changes" comment="" />
+    <list default="true" id="d11a2bd5-01f7-4187-8685-c73bef78a150" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/tienda_libros/src/main/java/utn/tienda_libros/vista/libroFrom.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +41,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/guillermo/LosCodificadores-4toSemestre/Java/Leccion03/tienda_libros/src/main/resources",
+    "last_opened_file_path": "C:/Users/guillermo/LosCodificadores-4toSemestre/Java/Leccion03",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +86,7 @@
       <workItem from="1699108791984" duration="158000" />
       <workItem from="1699108961137" duration="11906000" />
       <workItem from="1699125074718" duration="15422000" />
+      <workItem from="1699414278176" duration="4186000" />
     </task>
     <servers />
   </component>
