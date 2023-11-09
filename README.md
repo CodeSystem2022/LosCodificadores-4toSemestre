@@ -33,11 +33,11 @@ Grupo de la Tecnicatura Universitaria en Programación de la Universidad Tecnol�
 |**PYTHON** | *Nicolás Aranibar* |  ** **| | | 
 |**NODE** | *Nicolás Aranibar* |  ** **| | | 
 | ---- | ---- | --- | --- | --- |
-| **7 - 9** | *Guillermo Quinteros* | ** ** | | 
-|**JAVA** | *Guillermo Quinteros* | ** ** | | | 
-| **JAVASCRIPT**|*Guillermo Quinteros*  | ** ** | | | 
-|**PYTHON** | *Guillermo Quinteros* |  ** **| | | 
-|**NODE** | *Guillermo Quinteros* |  ** **| | | 
+| **7 - 8 - 9** | *Guillermo Quinteros* | **SEMANAS COMPLETAS** | |
+|**JAVA** | *Guillermo Quinteros* | **SEMANAS COMPLETAS** | | | 
+| **JAVASCRIPT**|*Guillermo Quinteros*  | **SEMANAS COMPLETAS** | | | 
+|**PYTHON** | *Guillermo Quinteros* |  **SEMANAS COMPLETAS**| | | 
+|**NODE** | *Guillermo Quinteros* |  **SEMANAS COMPLETAS**| | | 
 | ---- | ---- | --- | --- | --- |
 | **10 - 11** | *Giuliana Gaffoglio* |** **  | | 
 |**JAVA** | *Giuliana Gaffoglio* | ** ** | | | 
