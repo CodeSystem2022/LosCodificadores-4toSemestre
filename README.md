@@ -27,11 +27,11 @@ Grupo de la Tecnicatura Universitaria en Programación de la Universidad Tecnol�
 |**PYTHON** | *Cecilia Iribarren* |  **SEMANAS COMPLETAS**| | | 
 |**NODE** | *Cecilia Iribarren* |  **SEMANAS COMPLETAS**| | | 
 | ---- | ---- | --- | --- | --- |
-| **5 - 6** | *Nicolás Aranibar* | ** ** | | 
-|**JAVA** | *Nicolás Aranibar* | ** ** | | | 
-| **JAVASCRIPT**| *Nicolás Aranibar* | ** ** | | |
-|**PYTHON** | *Nicolás Aranibar* |  ** **| | | 
-|**NODE** | *Nicolás Aranibar* |  ** **| | | 
+| **5 - 6** | *Nicolás Aranibar* | ** ** | **SEMANAS COMPLETAS** | | |
+|**JAVA** | *Nicolás Aranibar* | ** ** | | **SEMANAS COMPLETAS** | | |
+| **JAVASCRIPT**| *Nicolás Aranibar* | ** ** | **SEMANAS COMPLETAS** | |
+|**PYTHON** | *Nicolás Aranibar* |  ** **| **SEMANAS COMPLETAS** | | 
+|**NODE** | *Nicolás Aranibar* |  ** **| **SEMANAS COMPLETAS**| | 
 | ---- | ---- | --- | --- | --- |
 | **7 - 8 - 9** | *Guillermo Quinteros* | **SEMANAS COMPLETAS** | |
 |**JAVA** | *Guillermo Quinteros* | **SEMANAS COMPLETAS** | | | 
