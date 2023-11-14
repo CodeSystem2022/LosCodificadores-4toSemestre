@@ -39,11 +39,11 @@ Grupo de la Tecnicatura Universitaria en Programaci√≥n de la Universidad Tecnol√
 |**PYTHON** | *Guillermo Quinteros* |  **SEMANAS COMPLETAS**| | | 
 |**NODE** | *Guillermo Quinteros* |  **SEMANAS COMPLETAS**| | | 
 | ---- | ---- | --- | --- | --- |
-| **10 - 11** | *Giuliana Gaffoglio* |** **  | | 
-|**JAVA** | *Giuliana Gaffoglio* | ** ** | | | 
-| **JAVASCRIPT**|*Giuliana Gaffoglio*  | ** ** | | | 
-|**PYTHON** | *Giuliana Gaffoglio* |  ** **| | | 
-|**NODE** | *Giuliana Gaffoglio* |  ** **| | | 
+| **10 - 11** | *Giuliana Gaffoglio* |**SEMANAS COMPLETAS** | | 
+|**JAVA** | *Giuliana Gaffoglio* | **SEMANAS COMPLETAS**| | | 
+| **JAVASCRIPT**|*Giuliana Gaffoglio*  | **SEMANAS COMPLETAS** | | | 
+|**PYTHON** | *Giuliana Gaffoglio* |  **SEMANAS COMPLETAS** | | | 
+|**NODE** | *Giuliana Gaffoglio* |  **SEMANAS COMPLETAS** | | | 
 | ---- | ---- | --- | --- | --- |
 | ** - ** |  | ** ** | | 
 |**JAVA** |  | ** ** | | | 
